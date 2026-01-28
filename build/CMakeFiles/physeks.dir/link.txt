@@ -1,2 +1,0 @@
-/usr/bin/ar qc libphyseks.a CMakeFiles/physeks.dir/src/bodies.cpp.o CMakeFiles/physeks.dir/src/core.cpp.o CMakeFiles/physeks.dir/src/geometry.cpp.o CMakeFiles/physeks.dir/src/vec2.cpp.o
-/usr/bin/ranlib libphyseks.a
