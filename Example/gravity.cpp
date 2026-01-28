@@ -8,7 +8,9 @@ struct Window: public canvas {
 
     phy::Physeks physeks;
     std::vector<SDL_Color> colors;
-    phy::Particle* firstObj;
+    phy::Particle *sun, *earth;
+
+    const float G = 6.67 * 10e-11;
 
     public:
         Window(const std::string& title): canvas(title){}
@@ -20,7 +22,8 @@ struct Window: public canvas {
         }
 
         bool physicsProcess(const float& dt) override 
-        {            
+        {   
+            earth->addForce(phy::Force::gravity(earth, sun, G));
             physeks.update(dt);
             return true;
         }
@@ -45,17 +48,26 @@ struct Window: public canvas {
         }
 
         bool init() override {
+            setFixedTimeStep(1.0f / 360.0f);
             physeks.createWorldBound(phy::vec2{ 0, 0 }, phy::vec2{ (float)W, (float)H });
 
-            for(int i = 0; i < 20; i++)
-            {
-                auto& obj = physeks.createBody<phy::Particle>(randRange(10, 40));
-                obj.pos = phy::vec2{ randRange(50, W), obj.radius };
-                obj.bounceFactor = randRange(0.60f, 0.95f);
-                obj.useGravity = true;
-                colors.push_back(SDL_Color{ (unsigned char)randRange(0, 255), (unsigned char)randRange(0, 255), (unsigned char)randRange(0, 255) });
-                if(i == 0) firstObj = &obj;                
-            }            
+            sun = &physeks.createBody<phy::Particle>(60.0f);
+            sun->pos = phy::vec2{ 320, 250 };
+            sun->useGravity = false;
+            // sun->isStatic = true;
+
+            earth = &physeks.createBody<phy::Particle>(15.0f);
+            earth->pos = phy::vec2{ 450, 150 };
+            earth->mass = 0.1f;
+            earth->useGravity = false;
+            earth->boundaryConstraint = false;
+            earth->vel = phy::vec2{ 10, 30 };
+
+            auto r = sun->pos - earth->pos;
+            sun->mass = (50 * 50 * r.length()) / (2 * G);
+
+            colors.push_back(SDL_Color{ 255, 204, 51 });
+            colors.push_back(SDL_Color{ 30, 90, 200  });
 
             return true;
         }
@@ -73,7 +85,7 @@ struct Window: public canvas {
 
 int main()
 {
-    Window win{ "Particles" };
+    Window win{ "Gravity" };
     if(!win.start()) return -1;
     return 0;
 }

@@ -1,30 +1,6 @@
 [
 {
   "directory": "/home/user/Documents/Programming/Physeks/build",
-  "command": "/usr/bin/g++   -g -std=c++20 -o CMakeFiles/physeks.dir/src/bodies.cpp.o -c /home/user/Documents/Programming/Physeks/src/bodies.cpp",
-  "file": "/home/user/Documents/Programming/Physeks/src/bodies.cpp",
-  "output": "CMakeFiles/physeks.dir/src/bodies.cpp.o"
-},
-{
-  "directory": "/home/user/Documents/Programming/Physeks/build",
-  "command": "/usr/bin/g++   -g -std=c++20 -o CMakeFiles/physeks.dir/src/core.cpp.o -c /home/user/Documents/Programming/Physeks/src/core.cpp",
-  "file": "/home/user/Documents/Programming/Physeks/src/core.cpp",
-  "output": "CMakeFiles/physeks.dir/src/core.cpp.o"
-},
-{
-  "directory": "/home/user/Documents/Programming/Physeks/build",
-  "command": "/usr/bin/g++   -g -std=c++20 -o CMakeFiles/physeks.dir/src/geometry.cpp.o -c /home/user/Documents/Programming/Physeks/src/geometry.cpp",
-  "file": "/home/user/Documents/Programming/Physeks/src/geometry.cpp",
-  "output": "CMakeFiles/physeks.dir/src/geometry.cpp.o"
-},
-{
-  "directory": "/home/user/Documents/Programming/Physeks/build",
-  "command": "/usr/bin/g++   -g -std=c++20 -o CMakeFiles/physeks.dir/src/vec2.cpp.o -c /home/user/Documents/Programming/Physeks/src/vec2.cpp",
-  "file": "/home/user/Documents/Programming/Physeks/src/vec2.cpp",
-  "output": "CMakeFiles/physeks.dir/src/vec2.cpp.o"
-},
-{
-  "directory": "/home/user/Documents/Programming/Physeks/build",
   "command": "/usr/bin/g++   -g -std=c++20 -o CMakeFiles/scratch.dir/scratch.cpp.o -c /home/user/Documents/Programming/Physeks/scratch.cpp",
   "file": "/home/user/Documents/Programming/Physeks/scratch.cpp",
   "output": "CMakeFiles/scratch.dir/scratch.cpp.o"
@@ -34,5 +10,11 @@
   "command": "/usr/bin/g++  -I/home/user/Documents/Programming/Physeks/Example/../include -g -std=c++20 -o CMakeFiles/particles.dir/particles.cpp.o -c /home/user/Documents/Programming/Physeks/Example/particles.cpp",
   "file": "/home/user/Documents/Programming/Physeks/Example/particles.cpp",
   "output": "Example/CMakeFiles/particles.dir/particles.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/Programming/Physeks/build/Example",
+  "command": "/usr/bin/g++  -I/home/user/Documents/Programming/Physeks/Example/../include -g -std=c++20 -o CMakeFiles/gravity.dir/gravity.cpp.o -c /home/user/Documents/Programming/Physeks/Example/gravity.cpp",
+  "file": "/home/user/Documents/Programming/Physeks/Example/gravity.cpp",
+  "output": "Example/CMakeFiles/gravity.dir/gravity.cpp.o"
 }
 ]

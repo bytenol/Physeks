@@ -15,16 +15,14 @@ namespace phy
     class Physeks {
 
         std::list<PhyseksBody> allBodies;
-        AABB boundary;
 
         public:
-            bool useGravity = true;
+            AABB boundary;
 
             Physeks() = default;
             void createWorldBound(const vec2& pos, const vec2& size);
 
             PhyseksBody* addObject(const PhyseksBody& body);
-            void removeObject(PhyseksBody* body);
 
             decltype(allBodies)& getBodies();
             bool update(const float& dt);

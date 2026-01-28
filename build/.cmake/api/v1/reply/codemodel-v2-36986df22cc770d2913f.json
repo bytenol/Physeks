@@ -19,7 +19,6 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						1,
 						2
 					]
 				},
@@ -35,7 +34,8 @@
 					"source" : "Example",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -54,7 +54,6 @@
 					"name" : "Physeks",
 					"targetIndexes" : 
 					[
-						1,
 						2
 					]
 				},
@@ -67,7 +66,8 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -75,17 +75,17 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "particles::@358d8db68dd7622887b4",
-					"jsonFile" : "target-particles-Debug-924ef3fc3d679e97136e.json",
-					"name" : "particles",
+					"id" : "gravity::@358d8db68dd7622887b4",
+					"jsonFile" : "target-gravity-Debug-866c3c5dd31dceeb81aa.json",
+					"name" : "gravity",
 					"projectIndex" : 1
 				},
 				{
-					"directoryIndex" : 0,
-					"id" : "physeks::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-physeks-Debug-a03d713bff83425f53f3.json",
-					"name" : "physeks",
-					"projectIndex" : 0
+					"directoryIndex" : 1,
+					"id" : "particles::@358d8db68dd7622887b4",
+					"jsonFile" : "target-particles-Debug-eab05d7135544d3c100e.json",
+					"name" : "particles",
+					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 0,

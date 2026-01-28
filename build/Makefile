@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named physeks
-
-# Build rule for target.
-physeks: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 physeks
-.PHONY : physeks
-
-# fast build rule for target.
-physeks/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/physeks.dir/build.make CMakeFiles/physeks.dir/build
-.PHONY : physeks/fast
-
-#=============================================================================
 # Target rules for targets named scratch
 
 # Build rule for target.
@@ -155,6 +142,19 @@ particles/fast:
 	$(MAKE) $(MAKESILENT) -f Example/CMakeFiles/particles.dir/build.make Example/CMakeFiles/particles.dir/build
 .PHONY : particles/fast
 
+#=============================================================================
+# Target rules for targets named gravity
+
+# Build rule for target.
+gravity: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gravity
+.PHONY : gravity
+
+# fast build rule for target.
+gravity/fast:
+	$(MAKE) $(MAKESILENT) -f Example/CMakeFiles/gravity.dir/build.make Example/CMakeFiles/gravity.dir/build
+.PHONY : gravity/fast
+
 scratch.o: scratch.cpp.o
 .PHONY : scratch.o
 
@@ -179,102 +179,6 @@ scratch.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/scratch.dir/build.make CMakeFiles/scratch.dir/scratch.cpp.s
 .PHONY : scratch.cpp.s
 
-src/bodies.o: src/bodies.cpp.o
-.PHONY : src/bodies.o
-
-# target to build an object file
-src/bodies.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/physeks.dir/build.make CMakeFiles/physeks.dir/src/bodies.cpp.o
-.PHONY : src/bodies.cpp.o
-
-src/bodies.i: src/bodies.cpp.i
-.PHONY : src/bodies.i
-
-# target to preprocess a source file
-src/bodies.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/physeks.dir/build.make CMakeFiles/physeks.dir/src/bodies.cpp.i
-.PHONY : src/bodies.cpp.i
-
-src/bodies.s: src/bodies.cpp.s
-.PHONY : src/bodies.s
-
-# target to generate assembly for a file
-src/bodies.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/physeks.dir/build.make CMakeFiles/physeks.dir/src/bodies.cpp.s
-.PHONY : src/bodies.cpp.s
-
-src/core.o: src/core.cpp.o
-.PHONY : src/core.o
-
-# target to build an object file
-src/core.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/physeks.dir/build.make CMakeFiles/physeks.dir/src/core.cpp.o
-.PHONY : src/core.cpp.o
-
-src/core.i: src/core.cpp.i
-.PHONY : src/core.i
-
-# target to preprocess a source file
-src/core.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/physeks.dir/build.make CMakeFiles/physeks.dir/src/core.cpp.i
-.PHONY : src/core.cpp.i
-
-src/core.s: src/core.cpp.s
-.PHONY : src/core.s
-
-# target to generate assembly for a file
-src/core.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/physeks.dir/build.make CMakeFiles/physeks.dir/src/core.cpp.s
-.PHONY : src/core.cpp.s
-
-src/geometry.o: src/geometry.cpp.o
-.PHONY : src/geometry.o
-
-# target to build an object file
-src/geometry.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/physeks.dir/build.make CMakeFiles/physeks.dir/src/geometry.cpp.o
-.PHONY : src/geometry.cpp.o
-
-src/geometry.i: src/geometry.cpp.i
-.PHONY : src/geometry.i
-
-# target to preprocess a source file
-src/geometry.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/physeks.dir/build.make CMakeFiles/physeks.dir/src/geometry.cpp.i
-.PHONY : src/geometry.cpp.i
-
-src/geometry.s: src/geometry.cpp.s
-.PHONY : src/geometry.s
-
-# target to generate assembly for a file
-src/geometry.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/physeks.dir/build.make CMakeFiles/physeks.dir/src/geometry.cpp.s
-.PHONY : src/geometry.cpp.s
-
-src/vec2.o: src/vec2.cpp.o
-.PHONY : src/vec2.o
-
-# target to build an object file
-src/vec2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/physeks.dir/build.make CMakeFiles/physeks.dir/src/vec2.cpp.o
-.PHONY : src/vec2.cpp.o
-
-src/vec2.i: src/vec2.cpp.i
-.PHONY : src/vec2.i
-
-# target to preprocess a source file
-src/vec2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/physeks.dir/build.make CMakeFiles/physeks.dir/src/vec2.cpp.i
-.PHONY : src/vec2.cpp.i
-
-src/vec2.s: src/vec2.cpp.s
-.PHONY : src/vec2.s
-
-# target to generate assembly for a file
-src/vec2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/physeks.dir/build.make CMakeFiles/physeks.dir/src/vec2.cpp.s
-.PHONY : src/vec2.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -283,24 +187,12 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... gravity"
 	@echo "... particles"
-	@echo "... physeks"
 	@echo "... scratch"
 	@echo "... scratch.o"
 	@echo "... scratch.i"
 	@echo "... scratch.s"
-	@echo "... src/bodies.o"
-	@echo "... src/bodies.i"
-	@echo "... src/bodies.s"
-	@echo "... src/core.o"
-	@echo "... src/core.i"
-	@echo "... src/core.s"
-	@echo "... src/geometry.o"
-	@echo "... src/geometry.i"
-	@echo "... src/geometry.s"
-	@echo "... src/vec2.o"
-	@echo "... src/vec2.i"
-	@echo "... src/vec2.s"
 .PHONY : help
 
 

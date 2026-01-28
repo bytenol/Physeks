@@ -18,7 +18,6 @@ class canvas {
 
     protected:
         static int W, H;
-        float fixedTimeStep = 1.0f / 60.0f;
         float physicsStepAccumulator = 0.0f;
 
     public:
@@ -49,13 +48,15 @@ class canvas {
 
                 while(SDL_PollEvent(&evt))
                     windowShouldClose = inputProcess(evt);
-                
+
+                // regular update
+                process(dt);
+                // physics update
                 while(physicsStepAccumulator >= fixedTimeStep) {
                     physicsProcess(fixedTimeStep);
                     physicsStepAccumulator -= fixedTimeStep;
                 }
 
-                process(dt);
                 render(renderer);
                 SDL_RenderPresent(renderer);
             }
@@ -86,11 +87,17 @@ class canvas {
         };
 
     protected:
+
+        void setFixedTimeStep(const float& f) 
+        {
+            fixedTimeStep = f;
+        }
+
         float randRange(const float& min, const float& max)
         {
             std::random_device rd;
             std::mt19937 gen(rd());
-            std::uniform_int_distribution<> dist(min, max);
+            std::uniform_real_distribution<> dist(min, max);
             return dist(gen);
         }
 
@@ -128,7 +135,7 @@ class canvas {
 
 
     private:
-
+        float fixedTimeStep = 1.0f / 60.0f;
         bool initSdl3() 
         {
             if (SDL_Init(SDL_INIT_VIDEO) < 0) {

@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/gravity.dir/gravity.cpp.o -o gravity  -Wl,-rpath,/usr/local/lib /usr/local/lib/libSDL3.so.0.4.0 

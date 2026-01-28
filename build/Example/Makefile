@@ -130,6 +130,44 @@ particles/fast:
 	cd /home/user/Documents/Programming/Physeks/build && $(MAKE) $(MAKESILENT) -f Example/CMakeFiles/particles.dir/build.make Example/CMakeFiles/particles.dir/build
 .PHONY : particles/fast
 
+# Convenience name for target.
+Example/CMakeFiles/gravity.dir/rule:
+	cd /home/user/Documents/Programming/Physeks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Example/CMakeFiles/gravity.dir/rule
+.PHONY : Example/CMakeFiles/gravity.dir/rule
+
+# Convenience name for target.
+gravity: Example/CMakeFiles/gravity.dir/rule
+.PHONY : gravity
+
+# fast build rule for target.
+gravity/fast:
+	cd /home/user/Documents/Programming/Physeks/build && $(MAKE) $(MAKESILENT) -f Example/CMakeFiles/gravity.dir/build.make Example/CMakeFiles/gravity.dir/build
+.PHONY : gravity/fast
+
+gravity.o: gravity.cpp.o
+.PHONY : gravity.o
+
+# target to build an object file
+gravity.cpp.o:
+	cd /home/user/Documents/Programming/Physeks/build && $(MAKE) $(MAKESILENT) -f Example/CMakeFiles/gravity.dir/build.make Example/CMakeFiles/gravity.dir/gravity.cpp.o
+.PHONY : gravity.cpp.o
+
+gravity.i: gravity.cpp.i
+.PHONY : gravity.i
+
+# target to preprocess a source file
+gravity.cpp.i:
+	cd /home/user/Documents/Programming/Physeks/build && $(MAKE) $(MAKESILENT) -f Example/CMakeFiles/gravity.dir/build.make Example/CMakeFiles/gravity.dir/gravity.cpp.i
+.PHONY : gravity.cpp.i
+
+gravity.s: gravity.cpp.s
+.PHONY : gravity.s
+
+# target to generate assembly for a file
+gravity.cpp.s:
+	cd /home/user/Documents/Programming/Physeks/build && $(MAKE) $(MAKESILENT) -f Example/CMakeFiles/gravity.dir/build.make Example/CMakeFiles/gravity.dir/gravity.cpp.s
+.PHONY : gravity.cpp.s
+
 particles.o: particles.cpp.o
 .PHONY : particles.o
 
@@ -162,7 +200,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... gravity"
 	@echo "... particles"
+	@echo "... gravity.o"
+	@echo "... gravity.i"
+	@echo "... gravity.s"
 	@echo "... particles.o"
 	@echo "... particles.i"
 	@echo "... particles.s"

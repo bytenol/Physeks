@@ -10,10 +10,10 @@ option(BUILD_EXAMPLES "Build test examples" ON)
 
 find_package(SDL3 CONFIG REQUIRED)
 
-file(GLOB PHYSEKS_PROJECT_FILES "src/*.cpp")
-file(GLOB PHYSEKS_HEADER_FILES "include/physeks/*.hpp")
+# file(GLOB PHYSEKS_PROJECT_FILES "src/*.cpp")
+# file(GLOB PHYSEKS_HEADER_FILES "include/physeks/*.hpp")
 
-add_library(physeks STATIC ${PHYSEKS_HEADER_FILES} ${PHYSEKS_PROJECT_FILES})
+# add_library(physeks STATIC ${PHYSEKS_HEADER_FILES} ${PHYSEKS_PROJECT_FILES})
 
 if(BUILD_EXAMPLES)
     add_subdirectory("Example")

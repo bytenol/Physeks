@@ -92,7 +92,6 @@ particles_EXTERNAL_OBJECTS =
 
 Example/particles: Example/CMakeFiles/particles.dir/particles.cpp.o
 Example/particles: Example/CMakeFiles/particles.dir/build.make
-Example/particles: libphyseks.a
 Example/particles: /usr/local/lib/libSDL3.so.0.4.0
 Example/particles: Example/CMakeFiles/particles.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/user/Documents/Programming/Physeks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable particles"
